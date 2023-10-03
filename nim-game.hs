@@ -45,7 +45,7 @@ getDigit :: String -> IO Int
 getDigit prompt = do
     putStr prompt
     input <- getLine
-    case input of
+    case input of   -- Performs pattern matching on the 'input' string.
         [x] | isDigit x -> return (digitToInt x)   -- "digitToInt" function casts a Char into an Integer.
         _ -> do
             newLine
